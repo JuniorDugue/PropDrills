@@ -8,17 +8,20 @@ import Daughter from './Daughter'
 // How do we receive props from a parent component? (something is missing here in our constructor)
 
 export default class Mom extends Component {
-    constructor(){
-        super()
+    // constructor(){
+    //     super()
+    constructor(props){
+        super(props)
     }
 
 
     // below, we will need to pass state to our children
     // Also, we need to put an onClick on the button, using the toggle method
   render() {
+    console.log(this.props, 'MOM --> ')
     return (
       <div>
-        <Daughter/>
+        <Daughter inherit={this.props.inherit}/>
         <button>Receive Inheritance</button>
       </div>
     )

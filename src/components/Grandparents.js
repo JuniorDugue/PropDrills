@@ -47,8 +47,8 @@ export default class  extends Component {
       //below are our Mom and Dad components. This is where we need to pass our state and our toggle function to both.
     return (
       <div>
-        <Dad/>
-        <Mom/>
+        <Dad inherit={this.state.passedInheritanceToGrandson} x={this.toggle}/>
+        <Mom inherit={this.state.passedInheritanceToGranddaughter} lambdarocks={this.toggle}/>
       </div>
     )
   }
